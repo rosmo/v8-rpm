@@ -1,0 +1,21 @@
+--- v8-git-mirror-4.4.63.31/build/standalone.gypi.old	2015-08-13 14:57:03.205002384 +0300
++++ v8-git-mirror-4.4.63.31/build/standalone.gypi	2015-08-13 14:57:19.299002348 +0300
+@@ -242,8 +242,7 @@
+               '-pedantic',
+               '-Wall',
+               '-Werror',
+-              '-Wextra',
+-              '-Wshorten-64-to-32',
++              '-Wextra'
+             ],
+             'cflags+': [
+               # Clang considers the `register` keyword as deprecated, but
+@@ -393,7 +392,7 @@
+           # TODO(arm64): It'd be nice to enable this for arm64 as well,
+           # but the Assembler requires some serious fixing first.
+           [ 'clang==1 and v8_target_arch=="x64"', {
+-            'cflags': [ '-Wshorten-64-to-32' ],
++            'cflags': [ ],
+           }],
+           [ 'host_arch=="ppc64" and OS!="aix"', {
+             'cflags': [ '-mminimal-toc' ],

@@ -1,0 +1,21 @@
+--- build/standalone.gypi.orig	2015-08-11 13:00:21.000000000 +0300
++++ build/standalone.gypi	2015-08-17 10:59:56.378002724 +0300
+@@ -385,8 +385,7 @@
+               '-pedantic',
+               '-Wall',
+               '-Werror',
+-              '-Wextra',
+-              '-Wshorten-64-to-32',
++              '-Wextra'
+             ],
+             'cflags+': [
+               # Clang considers the `register` keyword as deprecated, but
+@@ -591,7 +590,7 @@
+         'conditions': [
+           [ 'clang==1 and (v8_target_arch=="x64" or v8_target_arch=="arm64" \
+             or v8_target_arch=="mips64el")', {
+-            'cflags': [ '-Wshorten-64-to-32' ],
++            'cflags': [ ],
+           }],
+           [ 'host_arch=="ppc64" and OS!="aix"', {
+             'cflags': [ '-mminimal-toc' ],

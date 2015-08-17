@@ -5,6 +5,11 @@ CentOS 6 and 7 and other compatible distributions. It does not use gclient
 sync or any git shenanigans and downloads the dependencies using a simple
 script and git-archive.
 
+Currently includes spec files for:
+- 4.2.77.21
+- 4.4.63.31
+- 4.5.103.22
+
 ## Steps:
 
 Download a release from Github:
